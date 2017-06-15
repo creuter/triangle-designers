@@ -1,8 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  color: $base-font-color;
-  font-family: $font-stack-system;
   -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-stack-system;
+  justify-content: center;
+  min-height: 100vh;
   overflow: hidden;
+  padding: 3em;
 
   &::after {
     position: absolute;
@@ -18,6 +28,11 @@ body {
   }
 }
 
+h1 {
+  margin-top: 0;
+  margin-bottom: 3em;
+}
+
 h2 {
   font-size: 1.75em;
   font-weight: 400;
@@ -26,6 +41,7 @@ h2 {
 }
 
 p {
+  margin-bottom: 1.5em;
   color: $light-font-color;
   font-size: 1.375em;
 }
@@ -44,10 +60,19 @@ p {
 
 button {
   background-image: linear-gradient(#35a2ff, #628afb);
-  border: 0;
   border-radius: $base-border-radius;
+  border: 0;
   box-shadow: 0 2px 5px 0 rgba($base-font-color, 0.07), 0 1px 3px 0 rgba($base-font-color, 0.05);
   color: #fff;
   font-size: 1.375em;
   padding: 1em 2em;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+main {
+  max-width: 42em;
 }
