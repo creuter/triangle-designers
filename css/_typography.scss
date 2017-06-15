@@ -1,3 +1,53 @@
 body {
+  color: $base-font-color;
   font-family: $font-stack-system;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: -20vh;
+    bottom: 0;
+    right: -20vw;
+    width: 50vw;
+    background-size: cover;
+    background-image: url("../images/wireframes.png");
+    content: "";
+    transform: rotate(-20deg);
+    opacity: 0.5;
+  }
+}
+
+h2 {
+  font-size: 1.75em;
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+p {
+  color: $light-font-color;
+  font-size: 1.375em;
+}
+
+.form {
+}
+
+[type="email"] {
+  background-color: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  font-size: 1.375em;
+  margin-right: 0.5em;
+  padding: 1em;
+}
+
+button {
+  background-image: linear-gradient(#35a2ff, #628afb);
+  border: 0;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 5px 0 rgba($base-font-color, 0.07), 0 1px 3px 0 rgba($base-font-color, 0.05);
+  color: #fff;
+  font-size: 1.375em;
+  padding: 1em 2em;
 }
