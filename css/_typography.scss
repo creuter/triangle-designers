@@ -9,19 +9,31 @@ body {
   font-family: $font-stack-system;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
   padding: 3em;
+  font-size: 0.875em;
+
+  @media (min-width: 32em) {
+    font-size: 1em;
+  }
 
   &::after {
     background-image: url("../images/wireframes.png");
     background-size: cover;
     bottom: 0;
-    content: "";
     opacity: 0.5;
     position: absolute;
-    right: -15vw;
     top: -20vh;
-    transform: rotate(-20deg);
-    width: 50vw;
+    right: -15vw;
+    width: 30vw;
+
+    @media (min-width: 32em) {
+      content: "";
+      right: -15vw;
+      transform: rotate(-20deg);
+      width: 50vw;
+    }
+
   }
 }
 
@@ -53,6 +65,7 @@ p {
   font-size: 1.375em;
   margin-right: 0.5em;
   padding: 0.75em 1em;
+  margin-bottom: 0.5em;
 }
 
 button {
@@ -64,6 +77,7 @@ button {
   font-size: 1.375em;
   padding: 0.75em 2em;
   transition: opacity 0.2s ease-in-out;
+  margin-bottom: 0.5em;
 
   &:hover {
     opacity: 0.9;
@@ -71,5 +85,11 @@ button {
 }
 
 main {
-  max-width: 42em;
+  @media (min-width: 32em) {
+    max-width: calc(100vw - 4em - 40vw);
+  }
+
+  @media (min-width: 1080px) {
+    max-width: 42em;
+  }
 }

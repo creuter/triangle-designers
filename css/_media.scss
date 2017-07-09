@@ -1,11 +1,15 @@
 .media {
-  display: flex;
+  @media (min-width: 32em) {
+    display: flex;
+  }
 }
 
 .media-figure {
+  flex-shrink: 0;
   height: 3.25em;
-  width: 3.25em;
+  margin-bottom: 1.5em;
   margin-right: 1.5em;
+  width: 3.25em;
 }
 
 .media-body {
